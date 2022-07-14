@@ -3,6 +3,7 @@ const request = require('request');
 console.log(process.env.SERVERS)
 const servers = process.env.SERVERS.split(" ");
 
+var fs = require('fs');
 
 process.on('uncaughtException', function (err) {
     console.log(err);

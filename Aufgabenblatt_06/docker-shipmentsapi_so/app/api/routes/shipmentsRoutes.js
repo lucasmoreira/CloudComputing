@@ -14,4 +14,8 @@ app.route('/shipments/to/:plz')
 .get(shipments.list_shipments_Plz_To);
 app.route('/shipments/plz/:plz')
 .get(shipments.list_shipments_Plz3_To);
+app.route('/shipments/plzto/:plz')
+.get(shipments.list_shipments_Plz3_To);
+app.route('/shipments/plzfrom/:plz')
+.get(shipments.list_shipments_Plz3_From);
 };

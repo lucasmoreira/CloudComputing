@@ -40,7 +40,6 @@ res.json(Shipment);
 });
 };
 
-/*
 exports.list_shipments_Plz_To = function(req, res) {
 //Hier ihren Code einfügen
 Shipment.find({PLZ_To:req.params.plz}, function(err, Shipment) {
@@ -49,18 +48,17 @@ res.send(err);
 res.json(Shipment);
 });
 };
-*/
 
 //Erweiterung für <5 PLZ-Stellen
 exports.list_shipments_Plz3_To = function(req, res) {
 var regEx = new RegExp('^' +req.params.plz, 'i');
+const start = Date.now();
 Shipment.find({PLZ_To:{$regex: regEx}}, function(err, Shipment) {
 if (err)res.send(err);
 res.json(Shipment);
 });
 };
 
-/*
 exports.list_shipments_Plz_From = function(req, res) {
 //Hier ihren Code einfügen
 Shipment.find({PLZ_From:req.params.plz}, function(err, Shipment) {
@@ -69,7 +67,6 @@ res.send(err);
 res.json(Shipment);
 });
 };
-*/
 
 //Erweiterung für <5 PLZ-Stellen
 exports.list_shipments_Plz3_From = function(req, res) {
