@@ -24,4 +24,4 @@ We can now create multiple instances of MySQL/ShipmentsAPI and simply provide it
 
 ![Example](img/example.png)
 
-[Presentation (DE)](presentation/gruppe2.pdf)
+[Presentation (DE)](Presentation/gruppe2.pdf)
